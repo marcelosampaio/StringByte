@@ -10,15 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let str = "Ó"
+        let buf : [UInt8] = Array(str.utf8)
+        
+        print("👉 buf: \(buf)")
+        
+        
+        for char in buf {
+            print("         👉 \(char)  =  \(UnicodeScalar(char))")
+        }
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }
